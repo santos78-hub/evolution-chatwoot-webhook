@@ -26,7 +26,7 @@ app.post('/hooks/evolution', async (req, res) => {
       }]
     }, {
       headers: {
-        'api_access_token': 'SUA_API_KEY_AQUI',
+        'api_access_token': 'FyccmUiHH2iLGbowSeWkgEBg',
         'Content-Type': 'application/json'
       }
     });
@@ -39,5 +39,4 @@ app.post('/hooks/evolution', async (req, res) => {
 });
 
 app.listen(3000, () => {
-  console.log('Servidor webhook rodando na porta 3000');
-});
+  console.log('Ser

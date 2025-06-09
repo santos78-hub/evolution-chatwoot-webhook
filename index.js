@@ -7,10 +7,7 @@ app.use(express.json());
 app.post('/hooks/evolution', async (req, res) => {
   const payload = req.body;
 
-  const {
-    contact,
-    message
-  } = payload;
+  const { contact, message } = payload;
 
   try {
     await axios.post('https://elite1-chatwoot.tnt6ec.easypanel.host/api/v1/accounts/1/conversations', {
@@ -38,5 +35,8 @@ app.post('/hooks/evolution', async (req, res) => {
   }
 });
 
-app.listen(3000, () => {
-  console.log('Ser
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Servidor webhook rodando na porta ${PORT}`);
+});
